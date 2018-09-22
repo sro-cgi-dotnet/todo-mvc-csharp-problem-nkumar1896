@@ -13,35 +13,35 @@ namespace GoogleKeep.Tests
             return new List<Student>{
                 new Student{
                     StudentId = 1,
-                    Title = "Things to do",
+                    Title = "do more what you love",
                     checkLists = new List<CheckList>{
                         new CheckList{
                             CheckListId = 1,
-                            CheckListName = "Submit assignment before 6:00PM",
+                            CheckListName = "how are you",
                             StudentId = 1
                         }
                     },
                     labels = new List<Label>{
                         new Label{
                             LabelId = 1,
-                            LabelName = "ASP.NETCore"
+                            LabelName = "awesome"
                         }
                     }
                 },
                 new Student{
                     StudentId = 2,
-                    Title = "Trial",
+                    Title = "work to do",
                     checkLists = new List<CheckList>{
                         new CheckList{
                             CheckListId = 2,
-                            CheckListName = "Try Xunit",
+                            CheckListName = "will do it",
                             StudentId = 2
                         }
                     },
                     labels = new List<Label>{
                         new Label{
                             LabelId = 2,
-                            LabelName = "Trial"
+                            LabelName = "you can do it"
                         }
                     }
                 }
