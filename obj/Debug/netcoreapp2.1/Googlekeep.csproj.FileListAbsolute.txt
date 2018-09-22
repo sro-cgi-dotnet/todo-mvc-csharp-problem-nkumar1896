@@ -1,0 +1,14 @@
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\bin\Debug\netcoreapp2.1\Googlekeep.deps.json
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\bin\Debug\netcoreapp2.1\Googlekeep.runtimeconfig.json
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\bin\Debug\netcoreapp2.1\Googlekeep.runtimeconfig.dev.json
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\bin\Debug\netcoreapp2.1\Googlekeep.dll
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\bin\Debug\netcoreapp2.1\Googlekeep.pdb
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.csprojAssemblyReference.cache
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.csproj.CoreCompileInputs.cache
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.RazorAssemblyInfo.cache
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.RazorAssemblyInfo.cs
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.AssemblyInfoInputs.cache
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.AssemblyInfo.cs
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.RazorTargetAssemblyInfo.cache
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.dll
+C:\Users\CGI\Stackroute\Csharp\Googlekeep\obj\Debug\netcoreapp2.1\Googlekeep.pdb
