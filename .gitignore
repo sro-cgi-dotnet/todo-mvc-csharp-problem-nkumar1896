@@ -1,67 +1,149 @@
-*.swp
+###################
 
-*.*~
+# compiled source #
 
-project.lock.json
+###################
 
-.DS_Store
+*.com
 
-*.pyc
+*.class
 
-nupkg/
+*.dll
 
+*.exe
 
+*.pdb
 
-# Visual Studio Code
+*.dll.config
 
-.vscode
+*.cache
 
+*.suo
 
+# Include dlls if they’re in the NuGet packages directory
 
-# User-specific files
+!/packages/*/lib/*.dll
+
+!/packages/*/lib/*/*.dll
+
+# Include dlls if they're in the CommonReferences directory
+
+!*CommonReferences/*.dll
+
+####################
+
+# VS Upgrade stuff #
+
+####################
+
+UpgradeLog.XML
+
+_UpgradeReport_Files/
+
+###############
+
+# Directories #
+
+###############
+
+bin/
+
+obj/
+
+TestResults/
+
+###################
+
+# Web publish log #
+
+###################
+
+*.Publish.xml
+
+#############
+
+# Resharper #
+
+#############
+
+/_ReSharper.*
+
+*.ReSharper.*
+
+############
+
+# Packages #
+
+############
+
+# it’s better to unpack these files and commit the raw source
+
+# git has its own built in compression methods
+
+*.7z
+
+*.dmg
+
+*.gz
+
+*.iso
+
+*.jar
+
+*.rar
+
+*.tar
+
+*.zip
+
+######################
+
+# Logs and databases #
+
+######################
+
+*.log
+
+*.sqlite
+
+# OS generated files #
+
+######################
+
+.DS_Store?
+
+ehthumbs.db
+
+Icon?
+
+Thumbs.db
+
+[Bb]in
+
+[Oo]bj
+
+[Tt]est[Rr]esults
 
 *.suo
 
 *.user
 
-*.userosscache
+*.[Cc]ache
 
-*.sln.docstates
+*[Rr]esharper*
 
+packages
 
+NuGet.exe
 
-# Build results
+_[Ss]cripts
 
-[Dd]ebug/
+*.exe
 
-[Dd]ebugPublic/
+*.dll
 
-[Rr]elease/
+*.nupkg
 
-[Rr]eleases/
+*.ncrunchsolution
 
-x64/
-
-x86/
-
-build/
-
-bld/
-
-[Bb]in/
-
-[Oo]bj/
-
-[Oo]ut/
-
-msbuild.log
-
-msbuild.err
-
-msbuild.wrn
-
-
-
-# Visual Studio 2015
-
-.vs/
+*.dot[Cc]over
