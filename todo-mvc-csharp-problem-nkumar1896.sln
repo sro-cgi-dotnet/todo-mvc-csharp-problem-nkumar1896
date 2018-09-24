@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Googlekeep", "GoogleKeep\Googlekeep.csproj", "{1D978614-D21B-4AA6-B043-1ED1A6DA17D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleKeep", "GoogleKeep\Googlekeep.csproj", "{1D978614-D21B-4AA6-B043-1ED1A6DA17D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleKeep.Tests", "GoogleKeep.Tests\GoogleKeep.Tests.csproj", "{F6686141-DCD6-4BE6-A5C3-B05AB714BE5D}"
 EndProject

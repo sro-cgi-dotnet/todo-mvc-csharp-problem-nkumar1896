@@ -12,7 +12,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="../GoogleKeep/GoogleKeep.csproj" />
+    <ProjectReference Include="../GoogleKeep/Googlekeep.csproj" />
   </ItemGroup>
 
 </Project>
