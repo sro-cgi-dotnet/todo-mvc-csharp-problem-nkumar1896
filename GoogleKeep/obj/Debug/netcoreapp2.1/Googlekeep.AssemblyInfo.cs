@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("GoogleKeep")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Googlekeep")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("GoogleKeep")]
-[assembly: System.Reflection.AssemblyTitleAttribute("GoogleKeep")]
+[assembly: System.Reflection.AssemblyProductAttribute("Googlekeep")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Googlekeep")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

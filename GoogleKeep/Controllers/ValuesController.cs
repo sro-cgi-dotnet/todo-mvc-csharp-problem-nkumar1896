@@ -17,26 +17,29 @@ namespace EFCore.Controllers
         }
     
     [HttpGet]
-        public ActionResult<IEnumerable<Student>> Get()
+        public IActionResult Get()
         {
             
-           /* using( context ){
-            return     Ok(context.Students.ToList());
-            }*/
+          
             var notes = context.GetAllNotes();
-            if(notes.Count > 0){
-                return Ok(notes);
+            if(notes==null)
+            {
+                return NotFound("null database");
             }
-            else{
-                return Ok("No Entries Available. Database is Empty");
+            else
+            {
+
+            return Ok(notes);
             }
+            
+           
             
         }
        
 
         // GET api/values/5
         [HttpGet("{id:int}")]
-        public ActionResult<string> Get(int id)
+        public IActionResult Get(int id)
         {
             //return "value";
             var noteById = context.GetNote(id);
@@ -50,17 +53,21 @@ namespace EFCore.Controllers
             }
         }
         [HttpGet("{text}")]
-        public ActionResult<string> Get(string text , [FromQuery] string type)
+        public IActionResult Get(string text , [FromQuery] string type)
         {
             //return "value";
-            var noteById1 = context.GetNote(text,type);
-            if (noteById1 != null)
+            List<Student> noteBytext=context.GetNote(text,type);
+           // var noteById1 = context.GetNote(text,type);
+            if (noteBytext == null)
             {
-                return Ok(noteById1);
+                return BadRequest($"Type : {type} or Text : {text}  is invalid. Please try again");
             }
-            else
+            else if(noteBytext.Count==0)
             {
                 return NotFound($"Note with {text} not found.");
+            }
+            else{
+                return Ok(noteBytext);
             }
         }
 
