@@ -65,7 +65,6 @@ namespace GoogleKeep.Tests
 
             Assert.Equal (not.Count, model.Count);
             
-           // Assert.Equal(2 , not.Count);
         }
         [Fact]
         public void GetAll_Negative_EmptyList()
