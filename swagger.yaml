@@ -1,0 +1,211 @@
+swagger: "2.0"
+info:
+  description: "This is a documentation for a Google Keep - like web api which can fetch all notes, notes by id/title/label/pinned. One can Post, Put and Delete entries."
+  version: "1.0.0"
+  title: "GoogleKeep"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "xyz@sample.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "GoogleKeep.swagger.io"
+basePath: "/api"
+tags:
+- name: "GoogleKeep"
+  description: "Everything about your Notes"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+  /values:
+    get:
+      tags:
+      - "values"
+      summary: "Get all notes from the database"
+      operationId: "Get"
+      responses:
+        200:
+          description: "Database returned Notes"
+    post:
+      tags:
+      - "values"
+      summary: "Add a new note to keep"
+      operationId: "Post"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "Keep"
+        description: "Note object that needs to be added to GoogleKeep "
+        required: true
+        schema:
+          $ref: "#/definitions/Keep"
+      responses:
+        201:
+          description: "Note successfully created"
+        400:
+          description: "Note already exists, please try again."
+    
+  /values/{id}:
+    get:
+      tags:
+      - "values"
+      summary: "Finds Notes by Id"
+      operationId: "GetById"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "GoogleKeep Id values that need to be considered for filter"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid Id value"
+    put:
+      tags:
+      - "values"
+      summary: "Update an existing note"
+      operationId: "Put"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Id of the note you want to update"
+        type: "integer"
+        required: true
+      - in: "body"
+        name: "Note"
+        description: "Note object that needs to be added to GoogleKeep"
+        required: true
+        schema:
+          $ref: "#/definitions/Keep"
+      responses:
+        400:
+          description: "Invalid ID supplied"
+        201:
+          description: "Note Updated"
+    delete:
+      tags:
+      - "values"
+      summary: "Deletes a note"
+      operationId: "DeleteNote"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "Note successfully deleted"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Note not found"
+  /values/getbytype/{text}:
+    get:
+      tags:
+      - "todo"
+      summary: "Finds Notes by Title or Label"
+      description: "For Title --> type=Title , Labels --> query type=labels"
+      operationId: "GetByTitleOrLabel"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "text"
+        in: "path"
+        description: "text can be titleName, labelName, true/false for isPinned"
+        required: true
+        type: "string"
+      - name: "type"
+        in: "query"
+        description: "type can be title, label or pinned"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid type text combination"
+definitions:
+  Keep:
+    type: "object"
+    required:
+    - "Title"
+    properties:
+      StudentId:
+        type: "integer"
+        format: "int64"
+      Title:
+        type: "string"
+        example: "Sample Note Title"
+      PlainText:
+        type: "string"
+        example: "This is sample for the plaintext field."
+      pinned:
+        type: "boolean"
+      CheckList:
+        type: "array"
+        items:
+          $ref: "#/definitions/CheckList"
+      Label:
+        type: "array"
+        items:
+          $ref: "#/definitions/Label"
+    xml:
+      name: "Keep"
+  CheckList:
+    type: "object"
+    required:
+     - "CheckListName"
+    properties:
+      CheckListId:
+        type: "integer"
+        format: "int64"
+      CheckListName:
+        type: "string"
+        example: "Sample Checklist text"
+      StudentId:
+        type: "integer"
+        format: "int64"
+    xml:
+      name: "CheckList"
+  Label:
+    type: "object"
+    required:
+    - "LabelName"
+    properties:
+      LabelId:
+        type: "integer"
+        format: "int64"
+      LabelName:
+        type: "string"
+        example: "Sample Label"
+      StudentId:
+        type: "integer"
+    xml:
+      name: "Label"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
